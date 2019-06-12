@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use App\Http\Resources\PostResource;
 
 class PostController extends Controller
 {
@@ -18,13 +19,13 @@ class PostController extends Controller
         ->latest()
         ->paginate();
 
-        return response()->json($posts);
+        return PostResource::collection($posts);
     }
 
     public function show(string $slug)
     {
       $post = Post::with('category')->where('slug', $slug)->firstOrFail();
 
-      return response()->json($post);
+      return new PostResource($post);
     }
 }
