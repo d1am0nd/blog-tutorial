@@ -24,6 +24,10 @@
                 font-size: 2em;
                 margin-top: 0.5em;
             }
+            
+            h2 {
+                margin-bottom: 0.3em;
+            }
 
             .container {
                 width: auto;
@@ -31,6 +35,33 @@
                 padding: 0 15px;
                 margin-left: auto;
                 margin-right: auto;
+            }
+
+            ul.categories {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            ul.categories li {
+                float: left;
+            }
+
+            ul.categories li a {
+                display: block;
+                padding-right: 10px;
+            }
+
+            .summary {
+                font-size: 1.2em;
+                margin-top: 0.3em;
+                margin-bottom: 0.3em;
+            }
+
+            .read-more {
+                margin-top: 5px;
+                display: block;
             }
         </style>
     </head>
